@@ -1,0 +1,73 @@
+// 学生かつ支援Aが存在する関係
+graph Classes {
+    graph [
+        layout="sfdp",
+        label="Fire Emblem 風花雪月\n支援A相関図(黒青金)",
+        labelloc = "t",
+        labeljust = "l",
+        fontsize = 30,
+    ]
+    node [fixedsize=true,
+          width=1.55,
+          shape=box,
+          style=filled,
+          fillcolor=white ];
+    //black eagles
+    node [color="#B5433C", fillcolor="#ff000045"];
+    Edelgard[label="エーデルガルト"];
+    Hubert[label="ヒューベルト"];
+    Ferdinand[label="フェルディナント"];
+    Linhardt[label="リンハルト"];
+    Caspar[label="カスパル"];
+    Bernadetta[label="ベルナデッタ"];
+    Dorothea[label="ドロテア"];
+    Petra[label="ペトラ"];
+    //blue lions
+    node [color="#3E4898", fillcolor="#0000ff45"];
+    Dimitri[label="ディミトリ"];
+    Dedue[label="ドゥドゥー"];
+    Felix[label="フェリクス"];
+    Sylvain[label="シルヴァン"];
+    Ashe[label="アッシュ"];
+    Mercedes[label="メルセデス"];
+    Annette[label="アネット"];
+    Ingrid[label="イングリット"];
+    //golden deer
+    node [color="#A09129", fillcolor="#ffd66b37"];
+    Claude[label="クロード"];
+    Lorenz[label="ローレンツ"];
+    Raphael[label="ラファエル"];
+    Ignatz[label="イグナーツ"];
+    Hilda[label="ヒルダ"];
+    Lysithea[label="リシテア"];
+    Marianne[label="マリアンヌ"];
+    Leonie[label="レオニー"];
+    // relations on black eagles
+    Edelgard -- { Hubert, Ferdinand, Linhardt, Caspar, Bernadetta, Dorothea, Lysithea};
+    Hubert -- { Ferdinand, Bernadetta, Dorothea, Petra };
+    Ferdinand -- { Bernadetta, Dorothea, Petra, Mercedes, Marianne, Hilda };
+    Linhardt -- { Caspar, Bernadetta, Dorothea, Petra, Annette, Lysithea,
+        Marianne };
+    Caspar -- { Bernadetta, Dorothea, Petra, Ashe, Annette, Hilda };
+    Bernadetta -- { Felix, Raphael };
+    Dorothea -- { Petra, Felix, Sylvain, Lorenz };
+    Petra -- { Ashe, Claude, Ignatz };
+    // relations on blue lions
+    Dimitri -- { Dedue, Felix, Mercedes, Annette, Ingrid, Marianne };
+    Dedue -- { Ashe, Mercedes, Annette, Ingrid };
+    Felix -- { Sylvain, Mercedes, Annette, Ingrid, Lysithea, Leonie };
+    Ashe -- { Annette, Mercedes, Ingrid, Marianne };
+    Sylvain -- { Mercedes, Ingrid };
+    Mercedes -- { Annette, Lorenz, Ignatz };
+    Annette -- { Claude };
+    Ingrid -- { Claude, Raphael, Ignatz };
+    // relations on golden deer
+    Claude -- { Lorenz, Lysithea, Marianne, Hilda, Leonie };
+    Lorenz -- { Hilda, Lysithea, Marianne, Leonie };
+    Raphael -- { Ignatz, Hilda, Marianne, Leonie };
+    Ignatz -- { Hilda, Lysithea, Marianne, Leonie };
+    Hilda -- { Marianne };
+    Lysithea -- {};
+    Marianne -- {};
+    Leonie -- {};
+}
