@@ -58,17 +58,17 @@ graph Classes {
     Dedue      -- { Dimitri, Ashe, Mercedes, Annette, Ingrid };
     Felix      -- { Dimitri, Bernadetta, Dorothea, Sylvain, Mercedes, Annette, Ingrid, Lysithea, Leonie };
     Ashe       -- { Caspar, Petra, Dedue, Annette, Mercedes, Ingrid, Marianne };
-    Sylvain    -- { Felix, Mercedes, Ingrid };
-    Mercedes   -- { Ferdinand, Dimitri, Dedue, Felix, Sylvain, Annette, Lorenz, Ignatz };
-    Annette    -- { Linhardt, Caspar, Dimitri, Dedue, Mercedes, Claude };
-    Ingrid     -- { Dimitri, Dedue, Felix, Sylvain, Claude, Raphael, Ignatz };
+    Sylvain    -- { Dorothea, Felix, Mercedes, Ingrid };
+    Mercedes   -- { Ferdinand, Dimitri, Dedue, Felix, Sylvain, Ashe, Annette, Lorenz, Ignatz };
+    Annette    -- { Linhardt, Caspar, Dimitri, Dedue, Felix, Ashe, Mercedes, Claude };
+    Ingrid     -- { Dimitri, Dedue, Felix, Sylvain, Ashe, Claude, Raphael, Ignatz };
     // relations on golden deer
     Claude     -- { Petra, Annette, Ingrid, Lorenz, Lysithea, Marianne, Hilda, Leonie };
     Lorenz     -- { Dorothea, Mercedes, Claude, Lysithea, Marianne, Hilda, Leonie };
     Raphael    -- { Bernadetta, Ingrid, Ignatz, Lysithea, Marianne, Hilda, Leonie };
     Ignatz     -- { Petra, Mercedes, Ingrid, Raphael, Lysithea, Marianne, Hilda, Leonie };
-    Lysithea   -- { Edelgard, Linhardt, Felix, Claude, Lorenz, Raphael };
-    Marianne   -- { Ferdinand, Linhardt, Dimitri, Claude, Lorenz, Raphael, Ignatz };
+    Lysithea   -- { Edelgard, Linhardt, Felix, Claude, Lorenz, Raphael, Ignatz };
+    Marianne   -- { Ferdinand, Linhardt, Dimitri, Ashe, Claude, Lorenz, Raphael, Ignatz, Hilda };
     Hilda      -- { Ferdinand, Caspar, Claude, Lorenz, Raphael, Ignatz, Marianne };
     Leonie     -- { Felix, Claude, Lorenz, Raphael, Ignatz };
 }

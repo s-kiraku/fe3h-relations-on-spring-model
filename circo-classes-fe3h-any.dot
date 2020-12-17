@@ -26,8 +26,8 @@ graph Classes {
     Dimitri[label="ディミ"];
     Dedue[label="ドゥ"];
     Felix[label="フェリ"];
-    Sylvain[label="シル"];
     Ashe[label="アシュ"];
+    Sylvain[label="シル"];
     Mercedes[label="メル"];
     Annette[label="アネ"];
     Ingrid[label="イン"];
@@ -37,9 +37,9 @@ graph Classes {
     Lorenz[label="ロレ"];
     Raphael[label="ラファ"];
     Ignatz[label="イグ"];
-    Hilda[label="ヒル"];
     Lysithea[label="リシ"];
     Marianne[label="マリ"];
+    Hilda[label="ヒル"];
     Leonie[label="レオ"];
 
     // relations on black eagles

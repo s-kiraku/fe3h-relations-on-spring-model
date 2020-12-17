@@ -1,8 +1,8 @@
-// 灰狼以外で支援Aが存在する関係
-graph FE3H {
+// 支援Aが存在する関係
+graph Classes {
     graph [
         layout="sfdp",
-        label="Fire Emblem 風花雪月\n支援A相関図(灰狼を除く)\nver 1.1",
+        label="Fire Emblem 風花雪月\n全A支援相関図\nver 1.1",
         labelloc = "t",
         labeljust = "r",
         fontsize = 30,
@@ -30,8 +30,8 @@ graph FE3H {
     Dimitri[label="ディミトリ"];
     Dedue[label="ドゥドゥー"];
     Felix[label="フェリクス"];
-    Sylvain[label="シルヴァン"];
     Ashe[label="アッシュ"];
+    Sylvain[label="シルヴァン"];
     Mercedes[label="メルセデス"];
     Annette[label="アネット"];
     Ingrid[label="イングリット"];
@@ -41,9 +41,9 @@ graph FE3H {
     Lorenz[label="ローレンツ"];
     Raphael[label="ラファエル"];
     Ignatz[label="イグナーツ"];
-    Hilda[label="ヒルダ"];
     Lysithea[label="リシテア"];
     Marianne[label="マリアンヌ"];
+    Hilda[label="ヒルダ"];
     Leonie[label="レオニー"];
     //church of seiros
     node [color=silver, fillcolor="#E7E7E735"];
@@ -52,47 +52,64 @@ graph FE3H {
     Flayn[label="フレン"];
     Manuela[label="マヌエラ"];
     Hanneman[label="ハンネマン"];
-    Cyril[label="ツィリル"];
     Alois[label="アロイス"];
     Gilbert[label="ギルベルト"];
     Catherine[label="カトリーヌ"];
     Shamir[label="シャミア"];
+    Cyril[label="ツィリル"];
+    // adrestia
+    node [color="#B5433C", fillcolor="#ff000045"];
+    Jeritza[label="イエリッツァ"]
+    // ashen wolves
+    node [color=darkslategray, fillcolor="#69696935"];
+    Yuri[label="ユーリス"];
+    Balthus[label="バルタザール"];
+    Constance[label="コンスタンツェ"];
+    Hapi[label="ハピ"];
+
 
     // relations on black eagles
-    Edelgard   -- { Hubert, Ferdinand, Linhardt, Caspar, Bernadetta, Dorothea, Lysithea, Hanneman, Manuela };
+    Edelgard   -- { Hubert, Ferdinand, Linhardt, Caspar, Bernadetta, Dorothea, Lysithea, Hanneman, Manuela, Constance };
     Hubert     -- { Edelgard, Ferdinand, Bernadetta, Dorothea, Petra, Shamir };
-    Ferdinand  -- { Edelgard, Hubert, Bernadetta, Dorothea, Petra, Mercedes, Marianne, Hilda, Flayn, Manuela };
+    Ferdinand  -- { Edelgard, Hubert, Bernadetta, Dorothea, Petra, Mercedes, Marianne, Hilda, Flayn, Manuela, Constance };
     Linhardt   -- { Edelgard, Caspar, Bernadetta, Dorothea, Petra, Annette, Lysithea, Marianne, Flayn, Catherine };
     Caspar     -- { Edelgard, Linhardt, Bernadetta, Dorothea, Petra, Ashe, Annette, Hilda, Catherine, Shamir };
-    Bernadetta -- { Edelgard, Hubert, Ferdinand, Linhardt, Caspar, Felix, Raphael, Seteth, Alois };
-    Dorothea   -- { Edelgard, Hubert, Ferdinand, Linhardt, Caspar, Petra, Felix, Sylvain, Lorenz, Hanneman, Manuela };
+    Bernadetta -- { Edelgard, Hubert, Ferdinand, Linhardt, Caspar, Felix, Raphael, Seteth, Alois, Jeritza, Yuri };
+    Dorothea   -- { Edelgard, Hubert, Ferdinand, Linhardt, Caspar, Petra, Felix, Sylvain, Lorenz, Hanneman, Manuela, Yuri };
     Petra      -- { Hubert, Ferdinand, Linhardt, Caspar, Dorothea, Ashe, Claude, Ignatz, Cyril };
     // relations on blue lions
-    Dimitri    -- { Dedue, Felix, Mercedes, Annette, Ingrid, Marianne, Flayn, Gilbert, Catherine };
+    Dimitri    -- { Dedue, Felix, Mercedes, Annette, Ingrid, Marianne, Flayn, Gilbert, Catherine, Hapi };
     Dedue      -- { Dimitri, Ashe, Mercedes, Annette, Ingrid, Flayn, Shamir };
     Felix      -- { Dimitri, Bernadetta, Dorothea, Sylvain, Mercedes, Annette, Ingrid, Lysithea, Leonie, Flayn };
     Ashe       -- { Caspar, Petra, Dedue, Annette, Mercedes, Ingrid, Marianne, Catherine, Cyril };
-    Sylvain    -- { Felix, Mercedes, Ingrid };
-    Mercedes   -- { Ferdinand, Dimitri, Dedue, Felix, Sylvain, Annette, Lorenz, Ignatz, Alois };
-    Annette    -- { Linhardt, Caspar, Dimitri, Dedue, Mercedes, Claude, Hanneman, Gilbert };
-    Ingrid     -- { Dimitri, Dedue, Felix, Sylvain, Claude, Raphael, Ignatz, Seteth };
+    Sylvain    -- { Dorothea, Felix, Mercedes, Ingrid };
+    Mercedes   -- { Ferdinand, Dimitri, Dedue, Felix, Sylvain, Ashe, Annette, Lorenz, Ignatz, Alois, Jeritza, Constance };
+    Annette    -- { Linhardt, Caspar, Dimitri, Dedue, Felix, Ashe, Mercedes, Claude, Hanneman, Gilbert };
+    Ingrid     -- { Dimitri, Dedue, Felix, Sylvain, Ashe, Claude, Raphael, Ignatz, Seteth, Yuri };
     // relations on golden deer
-    Claude     -- { Petra, Annette, Ingrid, Lorenz, Lysithea, Marianne, Hilda, Leonie, Flayn, Shamir };
+    Claude     -- { Petra, Annette, Ingrid, Lorenz, Lysithea, Marianne, Hilda, Leonie, Flayn, Shamir, Balthus };
     Lorenz     -- { Dorothea, Mercedes, Claude, Lysithea, Marianne, Hilda, Leonie, Manuela, Catherine };
     Raphael    -- { Bernadetta, Ingrid, Ignatz, Lysithea, Marianne, Hilda, Leonie, Flayn, Shamir };
     Ignatz     -- { Petra, Mercedes, Ingrid, Raphael, Lysithea, Marianne, Hilda, Leonie, Flayn, Shamir };
-    Lysithea   -- { Edelgard, Linhardt, Felix, Claude, Lorenz, Raphael, Hanneman, Cyril };
-    Marianne   -- { Ferdinand, Linhardt, Dimitri, Claude, Lorenz, Raphael, Ignatz, Hanneman };
-    Hilda      -- { Ferdinand, Caspar, Claude, Lorenz, Raphael, Ignatz, Marianne, Seteth, Cyril };
+    Lysithea   -- { Edelgard, Linhardt, Felix, Claude, Lorenz, Raphael, Ignatz, Hanneman, Cyril, Balthus };
+    Marianne   -- { Ferdinand, Linhardt, Dimitri, Ashe, Claude, Lorenz, Raphael, Ignatz, Hilda, Hanneman };
+    Hilda      -- { Ferdinand, Caspar, Claude, Lorenz, Raphael, Ignatz, Marianne, Seteth, Cyril, Balthus };
     Leonie     -- { Felix, Claude, Lorenz, Raphael, Ignatz, Seteth, Alois, Shamir };
     // relations on church of seiros
     Seteth     -- { Bernadetta, Ingrid, Hilda, Leonie, Flayn, Manuela, Catherine, Cyril };
-    Flayn      -- { Ferdinand, Dimitri, Dedue, Felix, Claude, Raphael, Ignatz, Seteth, Manuela };
+    Flayn      -- { Ferdinand, Linhardt, Dimitri, Dedue, Felix, Claude, Raphael, Ignatz, Seteth, Manuela };
     Hanneman   -- { Edelgard, Dorothea, Annette, Lysithea, Marianne, Manuela };
     Manuela    -- { Edelgard, Ferdinand, Dorothea, Lorenz, Seteth, Flayn, Hanneman, Alois };
     Gilbert    -- { Dimitri, Annette };
     Alois      -- { Bernadetta, Mercedes, Leonie, Manuela, Catherine, Shamir };
-    Catherine  -- { Linhardt, Caspar, Dimitri, Lorenz, Shamir };
-    Shamir     -- { Hubert, Dedue, Claude, Raphael, Ignatz, Leonie, Alois, Catherine, Cyril };
-    Cyril      -- { Petra, Lysithea, Hilda, Seteth, Shamir };
+    Catherine  -- { Linhardt, Caspar, Dimitri, Ashe, Lorenz, Seteth, Alois, Shamir };
+    Shamir     -- { Hubert, Caspar, Dedue, Claude, Raphael, Ignatz, Leonie, Alois, Catherine, Cyril };
+    Cyril      -- { Petra, Ashe, Lysithea, Hilda, Seteth, Shamir };
+    // relation on adrestia
+    Jeritza    -- { Bernadetta, Mercedes, Constance };
+    // relations on ashen wolves
+    Yuri       -- { Bernadetta, Dorothea, Ingrid, Balthus, Constance, Hapi};
+    Balthus    -- { Claude, Lysithea, Hilda, Yuri, Constance, Hapi };
+    Constance  -- { Edelgard, Ferdinand, Jeritza, Yuri, Balthus, Hapi };
+    Hapi       -- { Linhardt, Dimitri, Ashe, Yuri, Balthus, Constance };
 }
