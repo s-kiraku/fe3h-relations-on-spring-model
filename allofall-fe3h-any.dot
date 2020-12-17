@@ -75,7 +75,7 @@ graph Classes {
     Hubert     -- { Linhardt, Caspar, Hanneman };
     Ferdinand  -- { Edelgard, Hubert, Bernadetta, Dorothea, Petra, Mercedes, Marianne, Hilda, Flayn, Manuela, Constance };
     Ferdinand  -- { Linhardt, Caspar, Lorenz };
-    Linhardt   -- { Edelgard, Caspar, Bernadetta, Dorothea, Petra, Annette, Lysithea, Marianne, Flayn, Catherine };
+    Linhardt   -- { Edelgard, Caspar, Bernadetta, Dorothea, Petra, Annette, Lysithea, Marianne, Flayn, Catherine, Hapi };
     Linhardt   -- { Ferdinand, Hubert, Hanneman };
     Caspar     -- { Edelgard, Linhardt, Bernadetta, Dorothea, Petra, Ashe, Annette, Hilda, Catherine, Shamir };
     Caspar     -- { Hubert, Ferdinand, Raphael };
@@ -93,7 +93,7 @@ graph Classes {
     Felix      -- { Dimitri, Bernadetta, Dorothea, Sylvain, Mercedes, Annette, Ingrid, Lysithea, Leonie, Flayn };
     Felix      -- { Dedue, Ashe, Seteth };
     Ashe       -- { Caspar, Petra, Dedue, Annette, Mercedes, Ingrid, Marianne, Catherine, Cyril };
-    Ashe       -- { Dimitri, Felix, Sylvain, Gilbert };
+    Ashe       -- { Dimitri, Felix, Sylvain, Gilbert, Hapi };
     Sylvain    -- { Dorothea, Felix, Mercedes, Ingrid };
     Sylvain    -- { Bernadetta, Dimitri, Dedue, Ashe, Annette, Lorenz, Lysithea, Marianne, Hilda, Leonie, Flayn, Manuela };
     Mercedes   -- { Ferdinand, Dimitri, Dedue, Felix, Sylvain, Ashe, Annette, Lorenz, Ignatz, Alois, Jeritza, Constance };
@@ -143,6 +143,6 @@ graph Classes {
     // relations on ashen wolves
     Yuri       -- { Bernadetta, Dorothea, Ingrid, Balthus, Constance, Hapi};
     Balthus    -- { Claude, Lysithea, Hilda, Yuri, Constance, Hapi };
-    Constance  -- { Edelgard, Ferdinand, Jeritza, Yuri, Balthus, Hapi };
+    Constance  -- { Edelgard, Ferdinand, Mercedes, Jeritza, Yuri, Balthus, Hapi };
     Hapi       -- { Linhardt, Dimitri, Ashe, Yuri, Balthus, Constance };
 }

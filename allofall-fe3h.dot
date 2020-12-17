@@ -72,7 +72,7 @@ graph Classes {
     Edelgard   -- { Hubert, Ferdinand, Linhardt, Caspar, Bernadetta, Dorothea, Lysithea, Hanneman, Manuela, Constance };
     Hubert     -- { Edelgard, Ferdinand, Bernadetta, Dorothea, Petra, Shamir };
     Ferdinand  -- { Edelgard, Hubert, Bernadetta, Dorothea, Petra, Mercedes, Marianne, Hilda, Flayn, Manuela, Constance };
-    Linhardt   -- { Edelgard, Caspar, Bernadetta, Dorothea, Petra, Annette, Lysithea, Marianne, Flayn, Catherine };
+    Linhardt   -- { Edelgard, Caspar, Bernadetta, Dorothea, Petra, Annette, Lysithea, Marianne, Flayn, Catherine, Hapi };
     Caspar     -- { Edelgard, Linhardt, Bernadetta, Dorothea, Petra, Ashe, Annette, Hilda, Catherine, Shamir };
     Bernadetta -- { Edelgard, Hubert, Ferdinand, Linhardt, Caspar, Felix, Raphael, Seteth, Alois, Jeritza, Yuri };
     Dorothea   -- { Edelgard, Hubert, Ferdinand, Linhardt, Caspar, Petra, Felix, Sylvain, Lorenz, Hanneman, Manuela, Yuri };
@@ -81,7 +81,7 @@ graph Classes {
     Dimitri    -- { Dedue, Felix, Mercedes, Annette, Ingrid, Marianne, Flayn, Gilbert, Catherine, Hapi };
     Dedue      -- { Dimitri, Ashe, Mercedes, Annette, Ingrid, Flayn, Shamir };
     Felix      -- { Dimitri, Bernadetta, Dorothea, Sylvain, Mercedes, Annette, Ingrid, Lysithea, Leonie, Flayn };
-    Ashe       -- { Caspar, Petra, Dedue, Annette, Mercedes, Ingrid, Marianne, Catherine, Cyril };
+    Ashe       -- { Caspar, Petra, Dedue, Annette, Mercedes, Ingrid, Marianne, Catherine, Cyril, Hapi };
     Sylvain    -- { Dorothea, Felix, Mercedes, Ingrid };
     Mercedes   -- { Ferdinand, Dimitri, Dedue, Felix, Sylvain, Ashe, Annette, Lorenz, Ignatz, Alois, Jeritza, Constance };
     Annette    -- { Linhardt, Caspar, Dimitri, Dedue, Felix, Ashe, Mercedes, Claude, Hanneman, Gilbert };
@@ -110,6 +110,6 @@ graph Classes {
     // relations on ashen wolves
     Yuri       -- { Bernadetta, Dorothea, Ingrid, Balthus, Constance, Hapi};
     Balthus    -- { Claude, Lysithea, Hilda, Yuri, Constance, Hapi };
-    Constance  -- { Edelgard, Ferdinand, Jeritza, Yuri, Balthus, Hapi };
+    Constance  -- { Edelgard, Ferdinand, Mercedes, Jeritza, Yuri, Balthus, Hapi };
     Hapi       -- { Linhardt, Dimitri, Ashe, Yuri, Balthus, Constance };
 }
